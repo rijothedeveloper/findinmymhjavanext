@@ -34,7 +34,7 @@ public class CategoryController {
     public ResponseEntity<APIResponse<CategoryDto[]>> getAllCategory() {
         APIResponse<CategoryDto[]> response = categoryService.getAllCategories();
         return ResponseEntity
-                .status(HttpStatus.ACCEPTED)
+                .status(HttpStatus.OK)
                 .body(response);
     }
 
@@ -45,7 +45,7 @@ public class CategoryController {
                 .status(HttpStatus.CREATED)
                 .body(response);
     }
-    @DeleteMapping("/{oldName}")
+    @DeleteMapping
     public ResponseEntity<APIResponse<CategoryDto>> deleteCategory(@RequestBody CategoryDto category) {
         APIResponse<CategoryDto> response = categoryService.deleteCategory(category);
         return ResponseEntity
