@@ -1,0 +1,19 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: findinmymh
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/findinmymh
+    username: root
+    password: example
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
